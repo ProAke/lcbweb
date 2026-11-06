@@ -1,0 +1,1 @@
+<script setup>const {data:s}=await useFetch('/api/settings',{default:()=>({})})</script><template><section class="wrap policy"><span class="section-kicker">TERMS OF USE</span><h1>เงื่อนไขการใช้งาน</h1><p>{{s.terms}}</p></section></template>

@@ -1,0 +1,3 @@
+import { readFile } from 'node:fs/promises'
+import { resolve } from 'node:path'
+export default defineEventHandler(async event=>{const name=getRouterParam(event,'name');if(!/^[a-f0-9-]{36}\.(jpg|png|webp)$/.test(name||''))throw createError({statusCode:404});try{const file=await readFile(resolve(process.env.DATA_DIR||'.data','uploads',name));setHeader(event,'Content-Type',name.endsWith('.png')?'image/png':name.endsWith('.webp')?'image/webp':'image/jpeg');setHeader(event,'X-Content-Type-Options','nosniff');setHeader(event,'Cache-Control','public, max-age=86400');return file}catch{throw createError({statusCode:404})}})
