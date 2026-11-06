@@ -1,0 +1,22 @@
+{
+  "name": "lcbweb",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "nuxt dev --host 0.0.0.0",
+    "build": "nuxt build",
+    "preview": "node .output/server/index.mjs",
+    "db:init": "node scripts/init-db.mjs",
+    "db:admin": "node scripts/create-admin.mjs",
+    "test:smoke": "node tests/smoke.mjs"
+  },
+  "dependencies": {
+    "nuxt": "^3.17.5",
+    "vue": "^3.5.17",
+    "mysql2": "^3.14.1",
+    "bcryptjs": "^3.0.2",
+    "lucide-vue-next": "^0.468.0",
+    "file-type": "^20.4.1"
+  }
+}
