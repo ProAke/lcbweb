@@ -1,0 +1,1 @@
+<script setup>const {data:s}=await useFetch('/api/settings',{default:()=>({})})</script><template><section class="wrap policy"><span class="section-kicker">PRIVACY POLICY</span><h1>นโยบายความเป็นส่วนตัว</h1><p>{{s.privacy}}</p></section></template>

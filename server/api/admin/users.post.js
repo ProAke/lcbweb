@@ -1,0 +1,4 @@
+import bcrypt from 'bcryptjs'
+import { db } from '../../utils/db.js'
+import { checkOrigin,requireUser,audit } from '../../utils/security.js'
+export default defineEventHandler(async event=>{checkOrigin(event); const user=await requireUser(event,true);const b=await readBody(event);if(!/^[a-zA-Z0-9._-]{3,100}$/.test(b?.username||'') || typeof b.password!=='string' || b.password.length<12 || b.password.length>72 || !['admin','editor'].includes(b.role)) throw createError({statusCode:400,statusMessage:'Invalid user or password'});try{await db().execute('INSERT INTO users (username,password_hash,role) VALUES (?,?,?)',[b.username,await bcrypt.hash(b.password,12),b.role])}catch(e){if(e.code==='ER_DUP_ENTRY')throw createError({statusCode:409,statusMessage:'Username already exists'});throw e} await audit(user,'user.create',b.username);return {ok:true}})
