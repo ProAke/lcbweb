@@ -11,7 +11,7 @@ const statements = [
 `CREATE TABLE IF NOT EXISTS audit_log (id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY, user_id INT UNSIGNED NULL, action VARCHAR(100) NOT NULL, details TEXT NOT NULL, created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci`
 ]
 for (const sql of statements) await db.query(sql)
-for (const item of seedContent) await db.execute('INSERT IGNORE INTO content (type,slug,title,summary,body,image,category,brand,status,sort_order) VALUES (?,?,?,?,?,?,?,?,?,?)', [item.type,item.slug,item.title,item.summary,item.body,item.image,item.category,item.brand,item.status,item.sort_order])
+for (const item of seedContent) await db.execute('INSERT IGNORE INTO content (type,slug,title,summary,body,image,category,brand,link,status,sort_order) VALUES (?,?,?,?,?,?,?,?,?,?,?)', [item.type,item.slug,item.title,item.summary,item.body,item.image,item.category,item.brand,item.link || '',item.status,item.sort_order])
 for (const [name,value] of Object.entries(defaultSettings)) await db.execute('INSERT IGNORE INTO settings (name,value) VALUES (?,?)',[name,value])
 console.log('Schema and starter content ready. Review starter content before publishing.')
 await db.end()

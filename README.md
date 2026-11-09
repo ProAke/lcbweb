@@ -37,3 +37,7 @@ HOST=0.0.0.0 PORT=3000 node .output/server/index.mjs
 Use HTTPS, set `COOKIE_SECURE=true`, configure a trusted reverse proxy, protect the admin route, and set `DATABASE_URL` and `DATA_DIR` on the server. The in-process login limiter is suitable only for a single process; use a shared rate limiter at the proxy for multiple instances. Keep uploaded storage outside the web root. The placeholder privacy/terms text, contact details, stock, brand permissions and promotions require company approval before launch. TirePoint+ integration, payment, customer account, bookings, and complete legacy migration are not implemented.
 
 For the product brief and outstanding decisions see [docs/website-plan-th.md](docs/website-plan-th.md).
+
+## Reference data and imports
+
+The read-only preview includes 10 explicitly labelled Cockpit reference products; they are not a branch inventory or price list. To stage these or supported CSV/JSON exports into an existing database, see [the import guide](docs/data-import-th.md). Imports default to draft and never overwrite an existing `(type, slug)`. Office authentication and a full legacy migration are not included. `data/legacy-products-page-1.csv` is an unverified snapshot of one legacy page with remote image links, not a complete export.

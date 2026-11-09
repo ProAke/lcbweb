@@ -1,3 +1,4 @@
+import { referenceProducts } from './reference-products.js'
 // Public preview content. Replace with reviewed branch-specific information before launch.
 export const seedContent = [
   {type:'banner',slug:'welcome',title:'ทุกการเดินทาง\nเริ่มต้นที่ความมั่นใจ',summary:'เรื่องยางและการดูแลรถ ให้เราอยู่เคียงข้างคุณ',body:'ศูนย์บริการยางและรถยนต์ แหลมฉบังอินเตอร์ออโต้ไทร์',image:'/images/hero.jpg',category:'',brand:'',status:'published',sort_order:1},
@@ -6,6 +7,7 @@ export const seedContent = [
   {type:'service',slug:'maintenance',title:'ดูแลและซ่อมบำรุง',summary:'ใส่ใจรถของคุณในทุกระยะทาง',body:'บริการดูแลช่วงล่าง เบรก คลัตช์ และเปลี่ยนถ่ายน้ำมันเครื่อง กรุณาสอบถามรายละเอียดบริการกับทางร้าน',image:'/images/workshop.jpg',category:'ซ่อมบำรุง',brand:'',status:'published',sort_order:3},
   {type:'product',slug:'passenger-tires',title:'ยางรถยนต์และรถกระบะ',summary:'ยางหลากหลายแบรนด์ สำหรับการใช้งานที่แตกต่าง',body:'ปรึกษาเราเพื่อเลือกรุ่นและขนาดยางที่เหมาะสมกับรถของคุณ',image:'/images/tires.jpg',category:'ยางรถยนต์',brand:'',status:'published',sort_order:1},
   {type:'product',slug:'truck-tires',title:'ยางรถบรรทุกและรถบัส',summary:'ยางสำหรับรถเพื่อการพาณิชย์และงานขนส่ง',body:'สอบถามรุ่นและขนาดยางที่เหมาะสมกับรถและลักษณะการใช้งานกับทีมงานของเรา',image:'/images/tires.jpg',category:'ยางรถบรรทุก',brand:'',status:'published',sort_order:2},
+  ...referenceProducts,
   {type:'article',slug:'tire-care',title:'ดูแลยางให้พร้อมในทุกการเดินทาง',summary:'เริ่มต้นความมั่นใจด้วยการหมั่นตรวจสอบสภาพยาง',body:'ตรวจสอบแรงดันลมยางและสภาพยางอย่างสม่ำเสมอ หากพบความผิดปกติควรให้ช่างผู้ชำนาญตรวจสอบก่อนเดินทาง',image:'/images/tires.jpg',category:'รอบรู้ดูแลรถ',brand:'',status:'published',sort_order:1},
   {type:'gallery',slug:'our-service',title:'บริการด้วยความใส่ใจ',summary:'ดูแลรถของคุณในทุกการเดินทาง',body:'',image:'/images/workshop.jpg',category:'ศูนย์บริการ',brand:'',status:'published',sort_order:1},
 ]
