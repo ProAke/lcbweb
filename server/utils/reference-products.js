@@ -16,7 +16,7 @@ const definitions = [
   ['ptt-engine-oil','น้ำมันเครื่อง PTT','น้ำมันและสารเหลว','PTT',generalSource],
 ]
 export const referenceProducts = definitions.map(([slug,title,category,brand,link],index)=>({
-  type:'product',slug,title,category,brand,link,image:'',status:'published',sort_order:index+10,
+  type:'product',slug,title,category,brand,link,image:({ 'bridgestone-ecopia-ep150':'/images/cockpit/ecopia-ep150-story.png', 'bridgestone-potenza-re005':'/images/cockpit/potenza-re005-story.png' })[slug] || '',status:'published',sort_order:index+10,
   summary:'ข้อมูลสินค้าอ้างอิงจาก Cockpit กรุณาสอบถามรุ่น ขนาด และสินค้าที่มีในสาขา',
   body:'รายการนี้เป็นข้อมูลสินค้าอ้างอิงจากเว็บไซต์ Cockpit ไม่ใช่การยืนยันสต็อก ราคา หรือโปรโมชั่นของสาขา กรุณาติดต่อร้านเพื่อตรวจสอบรุ่น ขนาด ความเหมาะสมกับรถ และสินค้าที่มีให้บริการก่อนตัดสินใจ',
 }))
