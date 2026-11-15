@@ -2,6 +2,8 @@ import { referenceProducts } from './reference-products.js'
 // Public preview content. Replace with reviewed branch-specific information before launch.
 export const seedContent = [
   {type:'banner',slug:'welcome',title:'ทุกการเดินทาง\nเริ่มต้นที่ความมั่นใจ',summary:'เรื่องยางและการดูแลรถ ให้เราอยู่เคียงข้างคุณ',body:'ศูนย์บริการยางและรถยนต์ แหลมฉบังอินเตอร์ออโต้ไทร์',image:'/images/hero.jpg',category:'',brand:'',status:'published',sort_order:1},
+  {type:'banner',slug:'services-preview',title:'ครบเรื่องรถ\nใส่ใจทุกการเดินทาง',summary:'เลือกดูบริการและสอบถามการติดตั้งที่หน้าร้าน',body:'',image:'/images/workshop.jpg',category:'',brand:'',status:'published',sort_order:2},
+  {type:'banner',slug:'products-preview',title:'เลือกยางที่ใช่\nสำหรับรถของคุณ',summary:'สำรวจสินค้าและชุดตัวอย่าง พร้อมสอบถามข้อมูลจากทีมงาน',body:'',image:'/images/tires.jpg',category:'',brand:'',status:'published',sort_order:3},
   {type:'service',slug:'tire',title:'ยางรถยนต์',summary:'เลือกยางให้เหมาะกับรถและการเดินทางของคุณ',body:'จำหน่ายยางรถยนต์ รถกระบะ รถบรรทุก และรถบัส พร้อมให้คำแนะนำในการเลือกยางที่เหมาะสมกับการใช้งาน',image:'/images/tires.jpg',category:'ยาง',brand:'',status:'published',sort_order:1},
   {type:'service',slug:'alignment',title:'ตั้งศูนย์และถ่วงล้อ',summary:'ดูแลสมดุลล้อ เพื่อการขับขี่อย่างมั่นใจ',body:'ปรึกษาทีมงานเกี่ยวกับการตั้งศูนย์ ถ่วงล้อ และการดูแลยางให้เหมาะสมกับรถของคุณ',image:'/images/workshop.jpg',category:'ช่วงล่าง',brand:'',status:'published',sort_order:2},
   {type:'service',slug:'maintenance',title:'ดูแลและซ่อมบำรุง',summary:'ใส่ใจรถของคุณในทุกระยะทาง',body:'บริการดูแลช่วงล่าง เบรก คลัตช์ และเปลี่ยนถ่ายน้ำมันเครื่อง กรุณาสอบถามรายละเอียดบริการกับทางร้าน',image:'/images/workshop.jpg',category:'ซ่อมบำรุง',brand:'',status:'published',sort_order:3},
