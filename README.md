@@ -41,3 +41,7 @@ For the product brief and outstanding decisions see [docs/website-plan-th.md](do
 ## Reference data and imports
 
 The read-only preview includes 10 explicitly labelled Cockpit reference products; they are not a branch inventory or price list. To stage these or supported CSV/JSON exports into an existing database, see [the import guide](docs/data-import-th.md). Imports default to draft and never overwrite an existing `(type, slug)`. Office authentication and a full legacy migration are not included. `data/legacy-products-page-1.csv` is an unverified snapshot of one legacy page with remote image links, not a complete export.
+
+## Shopping preview
+
+`/sets` and `/cart` are browser-local demonstrations only. The example bundles and product information are not verified branch offers. No stock is reserved, no order is created and checkout is deliberately disabled until the catalog, inventory, installation rules and payment provider are configured and verified. The preview selection stays in the current browser's local storage. Two Cockpit editorial images are used with the user's permission; see `docs/commerce-roadmap-th.md` for sources and outstanding requirements.

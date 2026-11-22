@@ -1,9 +1,11 @@
 import assert from 'node:assert/strict'
 const base=process.env.TEST_URL || 'http://127.0.0.1:3000'
 const get = async path => fetch(base+path, {redirect:'manual'})
-for(const path of ['/','/products','/products/passenger-tires','/services','/services/tire','/promotions','/articles','/about','/contact','/gallery','/privacy','/terms','/admin','/api/content','/api/settings','/sitemap.xml','/robots.txt']) {
+for(const path of ['/','/products','/products/passenger-tires','/services','/services/tire','/promotions','/articles','/about','/contact','/gallery','/privacy','/terms','/sets','/cart','/admin','/api/content','/api/settings','/sitemap.xml','/robots.txt']) {
  const response=await get(path); assert.equal(response.status,200,`${path}: expected 200, got ${response.status}`)
 }
+const cart = await (await get('/cart')).text()
+assert.match(cart,/ยังไม่ใช่ตะกร้าสั่งซื้อจริง/)
 assert.equal((await get('/products/does-not-exist')).status,404)
 assert.equal((await get('/api/content?type=invalid')).status,400)
 assert.equal((await get('/api/admin/me')).status,401)
